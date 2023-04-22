@@ -1,6 +1,10 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { Overview, BoxHeader, Card, Courses } from "./components";
+// import { Overview, BoxHeader, Card, Courses } from "./components";
+import Overview from "./components/overview/Overview";
+import BoxHeader from "./components/boxHeader/BoxHeader";
+import Card from "./components/card/Card";
+import Courses from "./components/courses/Courses";
 import { OverviewType } from "./types";
 
 const overviews: OverviewType[] = [
@@ -93,7 +97,11 @@ export default function Home() {
 
         <div className={styles.courses}>
           {courseTypes.map((courseType) => (
-            <Courses title={courseType.type} content={courseType.content} />
+            <Courses
+              key={courseType.type}
+              title={courseType.type}
+              content={courseType.content}
+            />
           ))}
         </div>
       </div>

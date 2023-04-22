@@ -1,5 +1,7 @@
 import { CoursesType } from "@/app/types";
-import { BoxHeader, Categories, Card } from "..";
+// import { BoxHeader, Categories, Card } from "..";
+import BoxHeader from "../boxHeader/BoxHeader";
+import Card from "../card/Card";
 import styles from "./Courses.module.css";
 
 export default function Courses({ title, content }: CoursesType) {
