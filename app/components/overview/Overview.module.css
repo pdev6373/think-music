@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  background: var(--box-background);
+  padding: 31.5px 16px;
+  gap: 8px;
+  border-radius: 16px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: var(--line-height);
+  color: #27272a;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: var(--line-height);
+  color: #71717a;
+}
+
+.value {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: var(--line-height);
+  color: #27272a;
+  margin-left: auto;
+}

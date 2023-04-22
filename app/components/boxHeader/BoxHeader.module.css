@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: var(--line-height);
+  color: #03152a;
+}
+
+@media (max-width: 800px) {
+  .title {
+    font-size: 16px;
+  }
+}
+
+.seeAll {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: var(--line-height);
+  color: #3375d9;
+}

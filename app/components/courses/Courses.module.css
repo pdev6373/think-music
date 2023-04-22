@@ -1,0 +1,15 @@
+.wrapper {
+  background-color: var(--box-background);
+  padding: 32px;
+  border-radius: var(--border-radius);
+}
+
+.marginBottom {
+  margin-bottom: 32px;
+}
+
+.cardWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16.5em, 1fr));
+  gap: 24px;
+}

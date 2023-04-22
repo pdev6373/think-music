@@ -1,0 +1,64 @@
+.header,
+.storeDropDown,
+.profile,
+.main {
+  display: flex;
+  align-items: center;
+}
+
+.storeDropDown,
+.notification,
+.profile {
+  cursor: pointer;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  justify-content: space-between;
+  background-color: var(--box-background);
+  padding: 16.18px 5.486vw;
+}
+
+.main {
+  gap: 16px;
+}
+
+.menu {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .main {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+}
+
+.profile,
+.storeDropDown {
+  gap: var(--gap-secondary);
+}
+
+.storeText {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: var(--line-height);
+  color: #3f3f46;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #03152a;
+}
+
+.occupation {
+  font-size: 12px;
+  line-height: var(--line-height);
+  color: #71717a;
+}
