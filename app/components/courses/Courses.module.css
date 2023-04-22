@@ -15,6 +15,14 @@
 }
 
 @media (max-width: 600px) {
+  .wrapper {
+    padding: 7.5px;
+  }
+
+  .marginBottom {
+    padding: 8.5px 8.5px 0;
+  }
+
   .cardWrapper {
     display: flex;
     flex-direction: column;

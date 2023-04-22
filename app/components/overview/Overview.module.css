@@ -27,7 +27,7 @@
   }
 }
 
-@media (max-width: 372px) {
+@media (max-width: 350px) {
   .wrapper {
     flex-direction: column-reverse;
     justify-content: center;
@@ -54,4 +54,10 @@
   font-size: 36px;
   line-height: var(--line-height);
   color: #27272a;
+}
+
+@media (max-width: 370px) {
+  .value {
+    font-size: 24px;
+  }
 }

@@ -51,12 +51,13 @@ main {
 
 @media (max-width: 600px) {
   main {
-    padding-inline: 24px;
+    padding-inline: 18px;
   }
 }
 
 .swiper {
   width: 100%;
+  padding-inline: 6px;
 }
 
 .swiper-pagination-bullet {
