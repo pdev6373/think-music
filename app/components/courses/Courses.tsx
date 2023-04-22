@@ -1,7 +1,5 @@
 import { CoursesType } from "@/app/types";
-// import { BoxHeader, Categories, Card } from "..";
-import BoxHeader from "../boxHeader/BoxHeader";
-import Card from "../card/Card";
+import { BoxHeader, Categories, Card } from "..";
 import styles from "./Courses.module.css";
 
 export default function Courses({ title, content }: CoursesType) {
@@ -11,7 +9,9 @@ export default function Courses({ title, content }: CoursesType) {
         <BoxHeader title={title} />
       </div>
 
-      <div className={styles.marginBottom}>{/* <Categories /> */}</div>
+      <div className={styles.marginBottom}>
+        <Categories />
+      </div>
 
       <div className={styles.cardWrapper}>
         {content.map((content, index) => (

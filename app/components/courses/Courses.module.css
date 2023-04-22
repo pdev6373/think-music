@@ -13,3 +13,10 @@
   grid-template-columns: repeat(auto-fit, minmax(16.5em, 1fr));
   gap: 24px;
 }
+
+@media (max-width: 600px) {
+  .cardWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}

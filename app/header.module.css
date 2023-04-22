@@ -30,18 +30,21 @@
   cursor: pointer;
 }
 
-@media (max-width: 800px) {
-  .main {
-    display: none;
-  }
-  .menu {
-    display: block;
-  }
+.logoWrapper {
+  position: relative;
+  width: 174px;
+  aspect-ratio: 3.107 / 1;
 }
 
 .profile,
 .storeDropDown {
   gap: var(--gap-secondary);
+}
+
+.profileImage {
+  position: relative;
+  width: clamp(2.2em, 3.334vw, 4em);
+  aspect-ratio: 1/1;
 }
 
 .storeText {
@@ -61,4 +64,35 @@
   font-size: 12px;
   line-height: var(--line-height);
   color: #71717a;
+}
+
+@media (max-width: 800px) {
+  .name {
+    font-size: 12px;
+  }
+
+  .occupation {
+    font-size: 10px;
+  }
+
+  .storeText {
+    font-size: 14px;
+  }
+
+  .header {
+    padding: 24px;
+  }
+
+  .logoWrapper {
+    width: 107px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
 }

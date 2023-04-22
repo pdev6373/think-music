@@ -1,9 +1,0 @@
-export { default as home } from "./home";
-export { default as explore } from "./explore";
-export { default as learning } from "./learning";
-export { default as store } from "./store";
-export { default as library } from "./library";
-export { default as tools } from "./tools";
-export { default as account } from "./account";
-export { default as help } from "./help";
-export { default as logout } from "./logout";

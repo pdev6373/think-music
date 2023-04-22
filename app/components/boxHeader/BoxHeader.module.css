@@ -11,7 +11,7 @@
   color: #03152a;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .title {
     font-size: 16px;
   }
@@ -22,4 +22,5 @@
   font-size: 14px;
   line-height: var(--line-height);
   color: #3375d9;
+  cursor: pointer;
 }

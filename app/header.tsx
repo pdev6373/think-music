@@ -4,13 +4,15 @@ import styles from "./header.module.css";
 export const Header = () => {
   return (
     <header className={styles.header}>
-      <Image src="/logo.svg" alt="logo" width={174} height={56} />
+      <div className={styles.logoWrapper}>
+        <Image src="/logo.svg" alt="logo" fill />
+      </div>
 
       <div className={styles.main}>
         <div className={styles.storeDropDown}>
           <Image src="/store.svg" alt="store" width={16} height={16} />
 
-          <span>Store</span>
+          <span className={styles.storeText}>Store</span>
           <Image src="/down.svg" alt="dowm" width={24} height={24} />
         </div>
 
@@ -23,7 +25,9 @@ export const Header = () => {
         />
 
         <div className={styles.profile}>
-          <Image src="/profile.svg" alt="frame" width={48} height={48} />
+          <div className={styles.profileImage}>
+            <Image src="/profile.svg" alt="frame" fill />
+          </div>
 
           <div>
             <p className={styles.name}>Samuel Oladokun</p>

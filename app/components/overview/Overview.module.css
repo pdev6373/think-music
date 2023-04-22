@@ -1,10 +1,38 @@
 .wrapper {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   background: var(--box-background);
   padding: 31.5px 16px;
-  gap: 8px;
   border-radius: 16px;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 240px) {
+  .details {
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 372px) {
+  .wrapper {
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 8px;
+  }
 }
 
 .title {
@@ -26,5 +54,4 @@
   font-size: 36px;
   line-height: var(--line-height);
   color: #27272a;
-  margin-left: auto;
 }

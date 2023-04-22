@@ -1,11 +1,18 @@
-import Image from "next/image";
+"use client";
+
 import styles from "./page.module.css";
-// import { Overview, BoxHeader, Card, Courses } from "./components";
-import Overview from "./components/overview/Overview";
-import BoxHeader from "./components/boxHeader/BoxHeader";
-import Card from "./components/card/Card";
-import Courses from "./components/courses/Courses";
+import { Overview, Courses } from "./components";
 import { OverviewType } from "./types";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+// import required modules
+import { Pagination } from "swiper";
 
 const overviews: OverviewType[] = [
   {
@@ -94,6 +101,25 @@ export default function Home() {
             />
           ))}
         </div>
+
+        <Swiper
+          pagination={true}
+          modules={[Pagination]}
+          className={styles.mySwiper}
+          spaceBetween={24}
+        >
+          {overviews.map((overview) => (
+            <SwiperSlide>
+              <Overview
+                key={overview.title}
+                title={overview.title}
+                description={overview.description}
+                icon={overview.icon}
+                value={overview.value}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
         <div className={styles.courses}>
           {courseTypes.map((courseType) => (

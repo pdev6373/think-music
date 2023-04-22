@@ -10,11 +10,13 @@ export default function Overview({
 }: OverviewType) {
   return (
     <div className={styles.wrapper}>
-      <Image src={icon} alt="overview" width={40} height={40} />
+      <div className={styles.details}>
+        <Image src={icon} alt="overview" width={40} height={40} />
 
-      <div>
-        <h2 className={styles.title}>{title}</h2>
-        <p className={styles.description}>{description}</p>
+        <div>
+          <h2 className={styles.title}>{title}</h2>
+          <p className={styles.description}>{description}</p>
+        </div>
       </div>
 
       <p className={styles.value}>{value}</p>

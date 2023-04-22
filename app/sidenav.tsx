@@ -1,21 +1,9 @@
 "use client";
 
 import NavLink from "next/link";
-import Image from "next/image";
 import styles from "./sidenav.module.css";
 import { usePathname } from "next/navigation";
-
-import {
-  home,
-  explore,
-  learning,
-  store,
-  library,
-  tools,
-  account,
-  help,
-  logout,
-} from "../public/navIcons";
+import Image from "next/image";
 
 interface NavType {
   text: string;
@@ -27,47 +15,47 @@ const navs: NavType[] = [
   {
     text: "Overview",
     route: "/",
-    icon: home,
+    icon: "home",
   },
   {
     text: "Explore Courses",
     route: "/explore-courses",
-    icon: explore,
+    icon: "explore",
   },
   {
     text: "My Learning",
     route: "/my-learning",
-    icon: learning,
+    icon: "learning",
   },
   {
     text: "store",
     route: "/store",
-    icon: store,
+    icon: "store",
   },
   {
     text: "Library",
     route: "/library",
-    icon: library,
+    icon: "library",
   },
   {
     text: "Music Tools",
     route: "/music-tools",
-    icon: tools,
+    icon: "tools",
   },
   {
     text: "My Account",
     route: "/my-account",
-    icon: account,
+    icon: "account",
   },
   {
     text: "Help",
     route: "/help",
-    icon: help,
+    icon: "help",
   },
   {
     text: "logout",
     route: "/logout",
-    icon: logout,
+    icon: "logout",
   },
 ];
 
@@ -86,10 +74,13 @@ export default function Sidenav() {
                 href={nav.route}
                 className={isCurrent ? styles.currentLink : styles.link}
               >
-                {nav.icon({
-                  color: isCurrent ? "#3375d9" : "#71717a",
-                  size: isCurrent ? 20 : 16,
-                })}
+                <Image
+                  src={`${nav.icon}.svg`}
+                  alt="nav icon"
+                  width={isCurrent ? 20 : 16}
+                  height={isCurrent ? 20 : 16}
+                  className={isCurrent ? styles.currentIcon : styles.icon}
+                />
                 <p
                   className={
                     isCurrent ? styles.currentLinkText : styles.linkText
