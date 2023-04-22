@@ -31,11 +31,6 @@
   gap: 8px;
 }
 
-.link:hover {
-  background-color: #f9fbff;
-  color: #3375d9;
-}
-
 .currentLink {
   position: relative;
   background-color: #f9fbff;
@@ -58,8 +53,11 @@
   line-height: var(--line-height);
 }
 
+.link:hover,
 .linkText:hover {
+  background-color: #f9fbff;
   color: #3375d9;
+  font-weight: 600;
 }
 
 .currentLinkText {
@@ -71,6 +69,11 @@
 .icon {
   filter: invert(46%) sepia(7%) saturate(335%) hue-rotate(202deg)
     brightness(95%) contrast(95%);
+}
+
+.link:hover .icon {
+  filter: invert(37%) sepia(98%) saturate(1737%) hue-rotate(202deg)
+    brightness(90%) contrast(88%);
 }
 
 .currentIcon {

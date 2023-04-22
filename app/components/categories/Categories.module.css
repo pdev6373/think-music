@@ -36,6 +36,11 @@
   color: #71717a;
 }
 
+.category:hover {
+  font-size: 500;
+  color: #3375d9;
+}
+
 .currentCategory {
   font-size: 500;
   color: #3375d9;
