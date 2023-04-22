@@ -109,9 +109,8 @@ export default function Home() {
           spaceBetween={24}
         >
           {overviews.map((overview) => (
-            <SwiperSlide>
+            <SwiperSlide key={overview.title}>
               <Overview
-                key={overview.title}
                 title={overview.title}
                 description={overview.description}
                 icon={overview.icon}

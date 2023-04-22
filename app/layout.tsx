@@ -11,6 +11,13 @@ const poppins = Poppins({
 export const metadata = {
   title: "Thinkmusik",
   description: "A musician favorite playground.",
+  icons: {
+    icon: {
+      url: "/logo.svg",
+      type: "image/svg",
+    },
+    shortcut: { url: "/logo.svg", type: "image/svg" },
+  },
 };
 
 export default function RootLayout({
