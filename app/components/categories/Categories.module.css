@@ -69,3 +69,9 @@
   font-size: 500;
   color: #3375d9;
 }
+
+@media (max-width: 600px) {
+  .wrapper:hover::-webkit-scrollbar {
+    display: none;
+  }
+}
