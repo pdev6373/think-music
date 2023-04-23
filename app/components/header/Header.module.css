@@ -18,7 +18,10 @@
   z-index: 5;
   justify-content: space-between;
   background-color: var(--box-background);
-  padding: 16.18px 5.486vw;
+  /* padding: 16.18px 5.486vw; */
+  padding-inline: 5.486vw;
+  height: 80px;
+  width: 100%;
 }
 
 .main {

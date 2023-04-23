@@ -16,11 +16,11 @@
 
 @media (max-width: 600px) {
   .wrapper {
-    padding: 7.5px;
+    padding: 16px 7.5px 24px;
   }
 
   .marginBottom {
-    padding: 8.5px 8.5px 0;
+    padding-inline: 8.5px;
   }
 
   .cardWrapper {

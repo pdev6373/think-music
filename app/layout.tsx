@@ -1,7 +1,6 @@
 import "./globals.css";
 import { Poppins } from "next/font/google";
-import { Header } from "./header";
-import Sidenav from "./sidenav";
+import { Layout } from "./components";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -28,12 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <Header />
-
-        <main className="main">
-          <Sidenav />
-          {children}
-        </main>
+        <Layout children={children} />
       </body>
     </html>
   );

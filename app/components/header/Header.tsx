@@ -1,7 +1,13 @@
 import Image from "next/image";
-import styles from "./header.module.css";
+import styles from "./Header.module.css";
 
-export const Header = () => {
+export default function Header({
+  setShowMobileNav,
+}: {
+  setShowMobileNav: any;
+}) {
+  const handleShowMobileNav = () => setShowMobileNav((prev: any) => !prev);
+
   return (
     <header className={styles.header}>
       <div className={styles.logoWrapper}>
@@ -44,7 +50,8 @@ export const Header = () => {
         width={24}
         height={24}
         className={styles.menu}
+        onClick={handleShowMobileNav}
       />
     </header>
   );
-};
+}

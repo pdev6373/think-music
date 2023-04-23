@@ -1,3 +1,5 @@
 export default function Page() {
-  return <>This Page is Not Available Yet</>;
+  return (
+    <div style={{ textAlign: "center" }}>This Page is Not Available Yet</div>
+  );
 }

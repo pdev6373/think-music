@@ -1,7 +1,7 @@
 "use client";
 
 import NavLink from "next/link";
-import styles from "./sidenav.module.css";
+import styles from "./Sidenav.module.css";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 
@@ -59,11 +59,19 @@ const navs: NavType[] = [
   },
 ];
 
-export default function Sidenav() {
+export default function Sidenav({
+  showMobileNav,
+  setShowMobileNav,
+}: {
+  showMobileNav: boolean;
+  setShowMobileNav: any;
+}) {
   const pathname = usePathname();
 
   return (
-    <nav className={styles.nav}>
+    <nav
+      className={showMobileNav ? `${styles.nav} ${styles.showNav}` : styles.nav}
+    >
       <ul className={styles.list}>
         {navs.map((nav) => {
           const isCurrent = pathname === nav.route;
@@ -73,6 +81,7 @@ export default function Sidenav() {
               <NavLink
                 href={nav.route}
                 className={isCurrent ? styles.currentLink : styles.link}
+                onClick={() => setShowMobileNav(false)}
               >
                 <Image
                   src={`${nav.icon}.svg`}
